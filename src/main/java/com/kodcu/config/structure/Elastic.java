@@ -9,6 +9,7 @@ public class Elastic {
     private int port;
     private String dateFormat;
     private Boolean longToString = false;
+    private Boolean objectIdAsHexString = false;
     private String clusterName; // optional
     private Auth auth; // optional
 
@@ -54,6 +55,14 @@ public class Elastic {
 
     public Boolean getLongToString() {
         return this.longToString;
+    }
+
+    public void setObjectIdAsHexString(Boolean objectIdAsHexString) {
+        this.objectIdAsHexString = objectIdAsHexString;
+    }
+
+    public Boolean getObjectIdAsHexString() {
+        return this.objectIdAsHexString;
     }
 
     public void setLongToString(Boolean longToString) {

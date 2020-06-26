@@ -118,7 +118,10 @@ public class ElasticBulkService implements BulkService {
             codecs.add(new CustomLongCodec());
         }
 
-        codecs.add(new StringObjectIdCodec());
+        if (config.getElastic().getObjectIdAsHexString()) {
+            // Replace default ObjectIdCodec class
+            codecs.add(new StringObjectIdCodec());
+        }
 
         if (codecs.size() > 0) {
             BsonTypeClassMap bsonTypeClassMap = new BsonTypeClassMap();
