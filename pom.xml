@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kodcu.mongolastic</groupId>
-    <artifactId>mongolastic</artifactId>
+    <artifactId>g</artifactId>
     <version>1.4.4</version>
 
     <properties>
@@ -29,6 +29,15 @@
     </organization>
 
     <developers>
+        <developer>
+            <id>morlok</id>
+            <name>Stepan Kladikov</name>
+            <email>inform.cosmo@yandex.ru</email>
+            <url>http://github.com/morlok1</url>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
         <developer>
             <id>ozlerhakan</id>
             <name>Hakan Ozler</name>
