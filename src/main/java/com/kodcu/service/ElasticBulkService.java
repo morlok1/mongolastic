@@ -5,6 +5,7 @@ import com.kodcu.config.YamlConfiguration;
 import com.kodcu.listener.BulkProcessorListener;
 import com.kodcu.util.codecs.CustomDateCodec;
 import com.kodcu.util.codecs.CustomLongCodec;
+import com.kodcu.util.codecs.StringObjectIdCodec;
 import com.mongodb.MongoClient;
 import org.bson.Document;
 import org.bson.codecs.BsonTypeClassMap;
@@ -116,6 +117,8 @@ public class ElasticBulkService implements BulkService {
             // Replace default LongCodec class
             codecs.add(new CustomLongCodec());
         }
+
+        codecs.add(new StringObjectIdCodec());
 
         if (codecs.size() > 0) {
             BsonTypeClassMap bsonTypeClassMap = new BsonTypeClassMap();
